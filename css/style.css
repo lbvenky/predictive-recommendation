@@ -1,0 +1,60 @@
+<style type="text/css">
+  body{
+    margin-top: 100px;
+    font-family: 'Trebuchet MS', serif;
+    line-height: 1.6
+  }
+  .container{
+    width: 1000px;
+    margin: 0 auto;
+    border:1px solid #0093a3
+  }
+
+  ul.tabs{
+    background: #0093a3;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+  }
+
+  ul.tabs li{
+    background: #0093a3;
+    color: rgba(255,255,255,0.70);
+    display: inline-block;
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+
+  ul.tabs li.current{
+    background: #0093a3 ;
+    color: #feea3d;
+    border-bottom: 1.5px solid #feea3d;
+  }
+
+  .tab-content{
+    display: none;
+    padding: 15px;
+  }
+
+  .tab-content.current{
+    display: inherit;
+  }
+
+  .header {
+    border-bottom:1px solid #0093a3;
+    color: white;
+    background: #00acc1;
+    padding:10px;
+    font-size: 19px;
+    font-weight: bold;
+  }
+
+  .notes {
+    color: rgba(255,255,255,0.70);
+    font-size: 14px;
+  }
+
+  .filter {
+    padding: 0em 0em 1em 10em;
+  }
+</style>
