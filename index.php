@@ -1,4 +1,13 @@
 
+
+#/***********************************************************************
+# * Predictive Recommendation
+#
+# * Author lbvenky
+# ************************************************************************
+<?php 
+ require_once('config.php');
+?>
 <html>
   <head lang="en">
       <meta charset="UTF-8">
@@ -20,7 +29,7 @@
         $incAge = $age +5;
         $ageRange = (!empty($age)) ? "[$age TO $incAge]" : '';
         $ageRange = urlencode($ageRange);
-        $solrApi  = "http://ec2-35-178-212-166.eu-west-2.compute.amazonaws.com:8983/solr/emisWeb-DB/select";
+        $solrApi  = SOLR_API;
 
         $apiStr = "$solrApi?q=*:*&rows=200";
         if(!empty($ageRange)) {
@@ -39,7 +48,7 @@
         if (empty($ageRange) && empty($gender) && empty($disease) && empty($location)) {
           $apiStr = "$solrApi?q=";
         }
-echo $apiStr;
+
         $solrJson = file_get_contents($apiStr);
 
         $medicationArr = array();
