@@ -6,7 +6,7 @@ A preliminary framework to obtain suggestions on the medications that could be p
 
 # Requirements
 
-If you are wanting to build and develop this, you will need the following items installed and vagrant file will do this for you. If you have the PHP setup already and don't want to have the Apache SOLR Installation then it can ve used directly by setting an SOLR API
+If you are wanting to build and develop this, you will need the following items installed and vagrant file will do this for you. If you have the PHP setup already and don't want to have the Apache SOLR Installation then any SOLR API can be configured.
 
 PHP 7.x<br/>
 Apache<br/>
@@ -16,4 +16,4 @@ Apache SOLR
 
 You will need the following constants to be defined
 
-SOLR_API = ""
+SOLR_API = "http://solr-url:8983/solr/collection-name/select?q=*:*"
